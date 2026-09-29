@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 212" width="240" height="212">
+  <!-- Favicon: the mark on a dark rounded tile. -->
+  <rect x="0" y="0" width="240" height="212" rx="40" fill="#0a0e1a" />
+  <g transform="translate(20 20)" fill="none" stroke-width="26" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="10">
+    <!-- Top-left chevron: brand black, drawn white on the dark tile. -->
+    <polyline points="70,18 18,18 67,102" stroke="#FFFFFF" />
+    <!-- Top-right chevron: brand cyan. -->
+    <polyline points="90,18 182,18 159,57" stroke="#00AEEF" />
+    <!-- Bottom chevron: brand pink. -->
+    <polyline points="80,124 100,158 148,77" stroke="#EC2D8B" />
+  </g>
+</svg>

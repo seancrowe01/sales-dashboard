@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design tokens from the spec*/
+:root {
+  --bg: #0a0e1a;
+  --surface: #0f1526;
+  --surface-2: #121a2e;
+  --border: rgba(148, 163, 184, 0.14);
+  --text: #f1f5f9;
+  --muted: #8b95a7;
+
+  --brand-primary: #4F8CFF;
+  --brand-secondary: #A855F7;
+  --brand-black: #000000;
+  --brand-white: #ffffff;
+
+  --accent-primary: #4F8CFF;
+  --accent-secondary: #A855F7;
+  --accent-green: #22c55e;
+  --accent-teal: #2dd4bf;
+  --accent-orange: #f59e0b;
+  --accent-slate: #64748b;
+  --accent-red: #ef4444;
+
+  --grid-line: rgba(148, 163, 184, 0.15);
+
+  --radius-card: 12px;
+  --radius-mini: 10px;
+  --radius-chip: 10px;
+  --radius-pill: 9999px;
+
+  --font-display: 'Space Grotesk', 'DM Sans', Inter, system-ui, sans-serif;
+  --font-sans: 'DM Sans', Inter, system-ui, sans-serif;
+
+  color-scheme: dark;
+}
+
+@layer base {
+  html {
+    background-color: var(--bg);
+  }
+  body {
+    margin: 0;
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer utilities {
+  /* Skeleton shimmer for cards during first load. */
+  .skeleton {
+    position: relative;
+    overflow: hidden;
+    background-color: rgba(148, 163, 184, 0.08);
+    border-radius: 8px;
+    color: transparent;
+  }
+  .skeleton::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    transform: translateX(-100%);
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(148, 163, 184, 0.14) 50%,
+      transparent 100%
+    );
+    animation: skeleton-shimmer 1.4s ease-in-out infinite;
+  }
+  /* The one decorative brand move: a 2px gradient line at the top of the header. */
+  .brand-topline {
+    background: linear-gradient(90deg, var(--brand-primary) 0%, var(--brand-secondary) 100%);
+    height: 2px;
+  }
+}
+
+@keyframes skeleton-shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skeleton::after {
+    animation: none;
+  }
+}
