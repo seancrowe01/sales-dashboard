@@ -1,5 +1,5 @@
 import type { LucideIcon } from 'lucide-react'
-import { GLOW_CLASS, type Accent } from '../../lib/colors'
+import { RULE_CLASS, type Accent } from '../../lib/colors'
 import IconChip from './IconChip'
 
 export interface StatCardProps {
@@ -8,7 +8,7 @@ export interface StatCardProps {
   subtitle?: string
   icon: LucideIcon
   accent: Accent
-  /** Coloured glow border (hero KPI cards). Plain 1px border otherwise. */
+  /** Hairline accent rule along the top edge (hero KPI cards). Plain border otherwise. */
   glow?: boolean
   /** lg = hero card padding and 40px chip (row 1), sm = tighter padding and 36px chip (row 2 and summary strips). The number is 32px in both. */
   size?: 'lg' | 'sm'
@@ -16,7 +16,7 @@ export interface StatCardProps {
 
 /** One big number per card, tiny muted label, optional subtitle, icon chip top right. */
 export default function StatCard({ label, value, subtitle, icon, accent, glow = false, size = 'lg' }: StatCardProps) {
-  const border = glow ? `border-transparent ${GLOW_CLASS[accent]}` : 'border-line'
+  const border = glow ? `border-line ${RULE_CLASS[accent]}` : 'border-line'
   const numberSize = 'text-[32px]'
   const padding = size === 'lg' ? 'p-5' : 'p-4'
   return (

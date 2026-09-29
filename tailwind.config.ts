@@ -7,30 +7,30 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        bg: '#0a0e1a',
-        surface: '#0f1526',
-        'surface-2': '#121a2e',
-        line: 'rgba(148,163,184,0.14)',
-        text: '#f1f5f9',
-        muted: '#8b95a7',
+        bg: '#0c0c0f',
+        surface: '#151519',
+        'surface-2': '#1c1c22',
+        line: 'rgba(255,255,255,0.09)',
+        text: '#ededf0',
+        muted: '#8b8b96',
         brand: {
-          primary: '#4F8CFF',
-          secondary: '#A855F7',
+          primary: '#E3A857',
+          secondary: '#9B8AFB',
           black: '#000000',
           white: '#FFFFFF',
         },
         accent: {
-          primary: '#4F8CFF',
-          secondary: '#A855F7',
+          primary: '#E3A857',
+          secondary: '#9B8AFB',
           green: '#22c55e',
           teal: '#2dd4bf',
-          orange: '#F59E0B',
+          orange: '#D2691E',
           slate: '#64748b',
           red: '#ef4444',
         },
       },
       fontFamily: {
-        display: ['"Space Grotesk"', '"DM Sans"', 'Inter', 'system-ui', 'sans-serif'],
+        display: ['"Outfit"', '"DM Sans"', 'Inter', 'system-ui', 'sans-serif'],
         sans: ['"DM Sans"', 'Inter', 'system-ui', 'sans-serif'],
       },
       borderRadius: {

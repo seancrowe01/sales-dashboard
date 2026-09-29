@@ -7,21 +7,19 @@ interface PanelProps {
   title: string
   subtitle?: string
   icon: LucideIcon
-  /** Panel tint: border and soft glow in the accent at about 25% alpha. */
+  /** Panel identity colour: a left edge rule, not a halo. */
   accent: Accent
   children: ReactNode
 }
 
-/** Large tinted panel (Organic = green, Paid Ads = orange) that holds a grid of mini cards. */
+/** Large panel (Organic = green, Paid Ads = orange) holding a grid of mini cards. The accent is
+ * a solid rule down the left edge, so panels read as sections rather than glowing objects. */
 export default function Panel({ title, subtitle, icon, accent, children }: PanelProps) {
   const hex = ACCENT_HEX[accent]
   return (
     <section
-      className="rounded-card bg-surface p-5"
-      style={{
-        border: `1px solid ${alpha(hex, 0.25)}`,
-        boxShadow: `0 0 24px ${alpha(hex, 0.08)}`,
-      }}
+      className="overflow-hidden rounded-card border border-line bg-surface p-5 pl-6"
+      style={{ boxShadow: `inset 3px 0 0 0 ${hex}`, background: `linear-gradient(90deg, ${alpha(hex, 0.05)} 0%, transparent 220px), var(--surface)` }}
     >
       <header className="mb-4 flex items-start justify-between gap-3">
         <div>

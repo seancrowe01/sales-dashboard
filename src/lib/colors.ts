@@ -9,30 +9,31 @@ export type Accent = 'primary' | 'secondary' | 'green' | 'teal' | 'orange' | 'sl
 export const ACCENT_HEX: Record<Accent, string> = {
   // CHANGE THESE TWO to make the dashboard your colours. Nothing else needs touching,
   // except the matching lines in tailwind.config.ts.
-  primary: '#4F8CFF', // first calls, the selected filter, the revenue column
-  secondary: '#A855F7', // close rate, the Follow-Ups tab, the selected view
+  primary: '#E3A857', // first calls, the selected filter, the contract column
+  secondary: '#9B8AFB', // close rate, the Follow-Ups tab, the selected view
   green: '#22c55e', // revenue, closed, positive
   teal: '#2dd4bf', // cash collected
-  orange: '#F59E0B', // text closes, pitched, paid ads
+  orange: '#D2691E', // text closes, pitched, paid ads
   slate: '#64748b', // scheduled
 }
 
-export const SURFACE = '#0f1526'
-export const SURFACE_2 = '#121a2e'
-export const BORDER = 'rgba(148,163,184,0.14)'
-export const TEXT = '#f1f5f9'
-export const MUTED = '#8b95a7'
-export const GRID_LINE = 'rgba(148,163,184,0.15)'
+export const SURFACE = '#151519'
+export const SURFACE_2 = '#1c1c22'
+export const BORDER = 'rgba(255,255,255,0.09)'
+export const TEXT = '#ededf0'
+export const MUTED = '#8b8b96'
+export const GRID_LINE = 'rgba(255,255,255,0.07)'
 export const FONT_SANS = "'DM Sans', Inter, system-ui, sans-serif"
 
-/** Tailwind glow class per accent (defined in tailwind.config.ts). */
-export const GLOW_CLASS: Record<Accent, string> = {
-  primary: 'shadow-glow-primary',
-  secondary: 'shadow-glow-secondary',
-  green: 'shadow-glow-green',
-  teal: 'shadow-glow-teal',
-  orange: 'shadow-glow-orange',
-  slate: '',
+/** Tailwind accent rule class per accent (defined in tailwind.config.ts). A hairline along the
+ * top edge of a highlighted card, instead of a coloured halo around it. */
+export const RULE_CLASS: Record<Accent, string> = {
+  primary: 'shadow-rule-primary',
+  secondary: 'shadow-rule-secondary',
+  green: 'shadow-rule-green',
+  teal: 'shadow-rule-teal',
+  orange: 'shadow-rule-orange',
+  slate: 'shadow-rule-slate',
 }
 
 /** Tailwind text colour class per accent. */

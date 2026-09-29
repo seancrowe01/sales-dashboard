@@ -33,13 +33,9 @@ const SERIES = [
 ] as const
 
 export default function OverallTrends({ points }: OverallTrendsProps) {
-  const data = points.map((p) => ({
-    label: p.label,
-    revenue: p.revenue,
-    firstCalls: p.firstCalls,
-    followUps: p.followUps,
-    textCloses: p.textCloses,
-  }))
+  // Pass the points straight through. A hand written projection here used to drop whichever
+  // field the chart was switched to read, and dataKey is a string so nothing catches that.
+  const data = points
   const empty = data.length === 0
 
   return (
