@@ -41,7 +41,7 @@ export default function LoginScreen({ onSuccess }: LoginScreenProps) {
       <main className="flex flex-1 items-center justify-center px-6 py-16">
         <form
           onSubmit={submit}
-          className="w-full max-w-[400px] rounded-card border border-line bg-surface p-8 shadow-glow-primary"
+          className="w-full max-w-[400px] rounded-card border border-line bg-surface p-8"
           aria-labelledby="login-title"
         >
           <div className="flex items-center gap-4">
@@ -85,7 +85,7 @@ export default function LoginScreen({ onSuccess }: LoginScreenProps) {
           <button
             type="submit"
             disabled={busy || !password}
-            className="mt-5 w-full rounded-full bg-brand-primary px-4 py-2.5 text-[14px] font-semibold text-bg shadow-glow-primary transition-opacity disabled:cursor-not-allowed disabled:opacity-40"
+            className="mt-5 w-full rounded-full bg-brand-primary px-4 py-2.5 text-[14px] font-semibold text-bg transition-opacity disabled:cursor-not-allowed disabled:opacity-40"
           >
             {busy ? 'Signing in' : 'Sign in'}
           </button>

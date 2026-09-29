@@ -32,7 +32,7 @@ export interface HeaderProps {
 
 const PILL_BASE =
   'whitespace-nowrap rounded-full px-3.5 py-1.5 text-[13px] font-medium leading-none transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary/60'
-const PILL_ACTIVE = 'bg-brand-primary text-bg shadow-glow-primary'
+const PILL_ACTIVE = 'bg-brand-primary text-bg'
 const PILL_INACTIVE = 'text-muted hover:bg-surface-2 hover:text-text'
 const OUTLINED =
   'inline-flex items-center gap-2 rounded-full border border-line bg-surface px-3.5 py-2 text-[13px] font-medium leading-none text-muted transition-colors hover:bg-surface-2 hover:text-text focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary/60'
@@ -125,7 +125,7 @@ export default function Header({
                   role="tab"
                   aria-selected={active}
                   onClick={() => onViewChange(key)}
-                  className={`${PILL_BASE} ${active ? 'bg-brand-secondary font-semibold text-bg shadow-glow-secondary' : PILL_INACTIVE}`}
+                  className={`${PILL_BASE} ${active ? 'bg-brand-secondary font-semibold text-bg' : PILL_INACTIVE}`}
                 >
                   {VIEW_LABELS[key]}
                 </button>
@@ -156,7 +156,7 @@ export default function Header({
               aria-haspopup="dialog"
               aria-expanded={open}
               onClick={() => setOpen((v) => !v)}
-              className={`${OUTLINED} ${customActive ? '!border-transparent !bg-brand-primary !text-bg shadow-glow-primary' : ''}`}
+              className={`${OUTLINED} ${customActive ? '!border-transparent !bg-brand-primary !text-bg' : ''}`}
               title={custom ? `${custom.start} to ${custom.end}` : 'Pick a custom date range'}
             >
               <Calendar size={16} aria-hidden="true" />
